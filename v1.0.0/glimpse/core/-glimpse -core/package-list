@@ -3,5 +3,6 @@ $dokka.linkExtension:html
 
 graphics.glimpse.cameras
 graphics.glimpse.lenses
+graphics.glimpse.logging
 graphics.glimpse.types
 
