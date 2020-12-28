@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <title>{{ page.title }}</title>
+        <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+        <link href="styles/style.css" rel="Stylesheet">
+        <link href="styles/logo-styles.css" rel="Stylesheet">
+        <link href="styles/jetbrains-mono.css" rel="Stylesheet">
+        <link href="styles/main.css" rel="Stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <div id="leftColumn">
+                <div id="logo"></div>
+            </div>
+            <div id="main">
+                <div class="main-content" id="content">
+                    <div class="cover ">
+                        <h2 class="">{{ page.title }}</h2>
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

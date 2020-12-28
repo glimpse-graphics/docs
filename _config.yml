@@ -1,0 +1,19 @@
+# Plugins:
+plugins:
+  - jekyll-paginate
+  - jekyll-coffeescript
+
+# Basic information:
+title: Glimpse Docs
+url: https://docs.glimpse.graphics
+
+# Social media:
+github: glimpse-graphics
+
+# Defaults:
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
