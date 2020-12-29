@@ -1,6 +1,7 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 
+graphics.glimpse
 graphics.glimpse.cameras
 graphics.glimpse.lenses
 graphics.glimpse.logging
