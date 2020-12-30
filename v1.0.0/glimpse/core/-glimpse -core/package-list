@@ -8,6 +8,7 @@ graphics.glimpse.lenses
 graphics.glimpse.logging
 graphics.glimpse.meshes
 graphics.glimpse.models
+graphics.glimpse.shaders
 graphics.glimpse.textures
 graphics.glimpse.types
 
