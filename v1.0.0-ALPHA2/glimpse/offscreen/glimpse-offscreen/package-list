@@ -1,0 +1,7 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+graphics.glimpse.offscreen
+graphics.glimpse.offscreen.egl
+graphics.glimpse.offscreen.gl
+
