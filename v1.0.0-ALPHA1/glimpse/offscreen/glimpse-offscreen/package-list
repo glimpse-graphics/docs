@@ -3,4 +3,5 @@ $dokka.linkExtension:html
 
 graphics.glimpse.offscreen
 graphics.glimpse.offscreen.egl
+graphics.glimpse.offscreen.gl
 
