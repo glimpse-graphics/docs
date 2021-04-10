@@ -1,0 +1,6 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:graphics.glimpse.ui.compose////PointingToDeclaration/ui-compose/graphics.glimpse.ui.compose/index.html
+$dokka.location:graphics.glimpse.ui.compose//GlimpseView/#graphics.glimpse.GlimpseCallback#kotlin.Boolean/PointingToDeclaration/ui-compose/graphics.glimpse.ui.compose/-glimpse-view.html
+graphics.glimpse.ui.compose
+
