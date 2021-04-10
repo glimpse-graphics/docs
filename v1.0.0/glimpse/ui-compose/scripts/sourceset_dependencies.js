@@ -1,1 +1,0 @@
-sourceset_dependencies = '{":glimpse:ui-compose:dokkaHtml/androidMain": [":glimpse:ui-compose:dokkaHtml/commonMain"], ":glimpse:ui-compose:dokkaHtml/commonMain": [], ":glimpse:ui-compose:dokkaHtml/desktopMain": [":glimpse:ui-compose:dokkaHtml/commonMain"]}'
