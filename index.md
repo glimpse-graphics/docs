@@ -6,6 +6,6 @@ keywords: glimpse,3d,opengl,api,docs,documentation
 
 ### API Versions:
 {% for version in site.data.versions %}
-- [v{{ version.version }}](v{{ version.version }}/-modules.html)
+- [v{{ version.version }}](v{{ version.version }}/)
 {% if version.stage %}  – {{ version.stage }}{% endif %}
 {% endfor %}
