@@ -1,0 +1,38 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:graphics.glimpse.meshes.obj//parseArrayMeshData/graphics.glimpse.meshes.obj.ObjMeshDataParser#java.io.File/PointingToDeclaration/obj/graphics.glimpse.meshes.obj/[desktop]parse-array-mesh-data.html
+$dokka.location:graphics.glimpse.meshes.obj//parseArrayMeshData/graphics.glimpse.meshes.obj.ObjMeshDataParser#java.io.InputStream/PointingToDeclaration/obj/graphics.glimpse.meshes.obj/[desktop]parse-array-mesh-data.html
+$dokka.location:graphics.glimpse.textures//fromFile/graphics.glimpse.textures.TextureImageSourceBuilder#java.io.File/PointingToDeclaration/core/graphics.glimpse.textures/[desktop]from-file.html
+module:core
+graphics.glimpse
+graphics.glimpse.buffers
+graphics.glimpse.cameras
+graphics.glimpse.lenses
+graphics.glimpse.logging
+graphics.glimpse.meshes
+graphics.glimpse.models
+graphics.glimpse.shaders
+graphics.glimpse.shaders.annotations
+graphics.glimpse.textures
+graphics.glimpse.types
+module:obj
+graphics.glimpse.meshes.obj
+module:offscreen
+graphics.glimpse.offscreen
+graphics.glimpse.offscreen.egl
+graphics.glimpse.offscreen.gl
+module:processor
+graphics.glimpse.processor
+graphics.glimpse.processor.poet.model
+module:processor-java
+graphics.glimpse.processor
+graphics.glimpse.processor.poet
+graphics.glimpse.processor.poet.model
+module:processor-kotlin
+graphics.glimpse.processor
+graphics.glimpse.processor.poet
+graphics.glimpse.processor.poet.model
+module:ui
+graphics.glimpse.ui
+module:ui-compose
+graphics.glimpse.ui.compose
