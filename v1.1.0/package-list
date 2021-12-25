@@ -39,3 +39,4 @@ module:glimpse-ui
 graphics.glimpse.ui
 module:glimpse-ui-compose
 graphics.glimpse.ui.compose
+graphics.glimpse.ui.compose.types
