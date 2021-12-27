@@ -7,6 +7,7 @@ module:glimpse-core
 graphics.glimpse
 graphics.glimpse.buffers
 graphics.glimpse.cameras
+graphics.glimpse.framebuffers
 graphics.glimpse.lenses
 graphics.glimpse.logging
 graphics.glimpse.meshes
