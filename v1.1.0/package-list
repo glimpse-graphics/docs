@@ -1,5 +1,7 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
+$dokka.location:graphics.glimpse.buffers/FloatBufferData/toString/#/PointingToDeclaration/glimpse-core/graphics.glimpse.buffers/-float-buffer-data/[desktop]to-string.html
+$dokka.location:graphics.glimpse.buffers/IntBufferData/toString/#/PointingToDeclaration/glimpse-core/graphics.glimpse.buffers/-int-buffer-data/[desktop]to-string.html
 $dokka.location:graphics.glimpse.meshes.obj//parseArrayMeshData/graphics.glimpse.meshes.obj.ObjMeshDataParser#java.io.File/PointingToDeclaration/glimpse-obj/graphics.glimpse.meshes.obj/[desktop]parse-array-mesh-data.html
 $dokka.location:graphics.glimpse.meshes.obj//parseArrayMeshData/graphics.glimpse.meshes.obj.ObjMeshDataParser#java.io.InputStream/PointingToDeclaration/glimpse-obj/graphics.glimpse.meshes.obj/[desktop]parse-array-mesh-data.html
 $dokka.location:graphics.glimpse.textures//fromFile/graphics.glimpse.textures.TextureImageSourceBuilder#java.io.File/PointingToDeclaration/glimpse-core/graphics.glimpse.textures/[desktop]from-file.html
