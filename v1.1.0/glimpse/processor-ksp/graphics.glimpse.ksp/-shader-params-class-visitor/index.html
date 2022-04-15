@@ -1,455 +1,470 @@
+<!doctype html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>ShaderParamsClassVisitor</title>
-</head><body><link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
-    <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><link href="../../../../styles/prism.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" defer></script><script type="text/javascript" src="../../../../scripts/prism.js" async></script><script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
 const savedDarkMode = storage ? JSON.parse(storage) : false
 if(savedDarkMode === true){
     document.getElementsByTagName("html")[0].classList.add("theme-dark")
 }</script>
-
-  
-    <div class="navigation-wrapper" id="navigation-wrapper">
-      <div id="leftToggler"><span class="icon-toggler"></span></div>
-      <div class="library-name"><a href="../../../../index.html"><span>glimpse-graphics</span></a></div>
-      <div>1.1.0-ALPHA3</div>
-      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
-      </div>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../../index.html">
+<span>glimpse-graphics</span>            </a>    </div>
+    <div>1.1.0-ALPHA3
     </div>
-    <div id="container">
-      <div id="leftColumn">
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
         <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <div class="main-content" id="content" pageids="glimpse-processor-ksp::graphics.glimpse.ksp/ShaderParamsClassVisitor///PointingToDeclaration//-2122705810">
-          <div class="breadcrumbs"><a href="../../index.html">glimpse-processor-ksp</a>/<a href="../index.html">graphics.glimpse.ksp</a>/<a href="index.html">ShaderParamsClassVisitor</a></div>
-          <div class="cover ">
-            <h1 class="cover"><span>Shader</span><wbr><span>Params</span><wbr><span>Class</span><wbr><span><span>Visitor</span></span></h1>
-            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">ShaderParamsClassVisitor</a> : <span data-unresolved-link="com.google.devtools.ksp.visitor/KSDefaultVisitor///PointingToDeclaration/">KSDefaultVisitor</span><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Visitor generating code of a <code class="lang-kotlin">ProgramExecutor</code> from class annotated with <code class="lang-kotlin">@ShaderParams</code>.</p></div></div>
-          </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
-            <div class="tabs-section-body">
-              <h2 class="tabbedcontent">Constructors</h2>
-              <div class="table" data-togglable="Constructors"><a data-name="-148022099%2FConstructors%2F-2122705810" anchor-label="ShaderParamsClassVisitor" id="-148022099%2FConstructors%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue TabbedContent">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="-shader-params-class-visitor.html"><span>Shader</span><wbr><span>Params</span><wbr><span>Class</span><wbr><span><span>Visitor</span></span></a></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="glimpse-processor-ksp::graphics.glimpse.ksp/ShaderParamsClassVisitor///PointingToDeclaration//-2122705810">
+  <div class="breadcrumbs"><a href="../../index.html">glimpse-processor-ksp</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.ksp</a><span class="delimiter">/</span><a href="index.html">ShaderParamsClassVisitor</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Shader</span><wbr><span>Params</span><wbr><span>Class</span><wbr><span><span>Visitor</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">ShaderParamsClassVisitor</a> : <span data-unresolved-link="com.google.devtools.ksp.visitor/KSDefaultVisitor///PointingToDeclaration/">KSDefaultVisitor</span><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Visitor generating code of a <code class="lang-kotlin">ProgramExecutor</code> from class annotated with <code class="lang-kotlin">@ShaderParams</code>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-148022099%2FConstructors%2F-2122705810" anchor-label="ShaderParamsClassVisitor" id="-148022099%2FConstructors%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-shader-params-class-visitor.html"><span>Shader</span><wbr><span>Params</span><wbr><span>Class</span><wbr><span><span>Visitor</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-148022099%2FConstructors%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-shader-params-class-visitor.html"><span class="token function">ShaderParamsClassVisitor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h2 class="">Types</h2>
-              <div class="table" data-togglable="Types"><a data-name="-96389645%2FClasslikes%2F-2122705810" anchor-label="Companion" id="-96389645%2FClasslikes%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-96389645%2FClasslikes%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="1994799243%2FFunctions%2F-2122705810" anchor-label="defaultHandler" id="1994799243%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="default-handler.html"><span>default</span><wbr><span><span>Handler</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994799243%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="default-handler.html"><span class="token function">defaultHandler</span></a><span class="token punctuation">(</span>node<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSNode///PointingToDeclaration/">KSNode</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1596609199%2FFunctions%2F-2122705810" anchor-label="visitAnnotated" id="-1596609199%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1596609199%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Annotated</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1596609199%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1596609199%2FFunctions%2F-2122705810"><span class="token function">visitAnnotated</span></a><span class="token punctuation">(</span>annotated<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSAnnotated///PointingToDeclaration/">KSAnnotated</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-432854519%2FFunctions%2F-2122705810" anchor-label="visitAnnotation" id="-432854519%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-432854519%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Annotation</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-432854519%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-432854519%2FFunctions%2F-2122705810"><span class="token function">visitAnnotation</span></a><span class="token punctuation">(</span>annotation<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSAnnotation///PointingToDeclaration/">KSAnnotation</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1298586233%2FFunctions%2F-2122705810" anchor-label="visitCallableReference" id="-1298586233%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1298586233%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Callable</span><wbr><span><span>Reference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1298586233%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1298586233%2FFunctions%2F-2122705810"><span class="token function">visitCallableReference</span></a><span class="token punctuation">(</span>reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSCallableReference///PointingToDeclaration/">KSCallableReference</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1162486043%2FFunctions%2F-2122705810" anchor-label="visitClassDeclaration" id="-1162486043%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="visit-class-declaration.html"><span>visit</span><wbr><span>Class</span><wbr><span><span>Declaration</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1162486043%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="visit-class-declaration.html"><span class="token function">visitClassDeclaration</span></a><span class="token punctuation">(</span>classDeclaration<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSClassDeclaration///PointingToDeclaration/">KSClassDeclaration</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1780048395%2FFunctions%2F-2122705810" anchor-label="visitClassifierReference" id="-1780048395%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1780048395%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Classifier</span><wbr><span><span>Reference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1780048395%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1780048395%2FFunctions%2F-2122705810"><span class="token function">visitClassifierReference</span></a><span class="token punctuation">(</span>reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSClassifierReference///PointingToDeclaration/">KSClassifierReference</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1259224725%2FFunctions%2F-2122705810" anchor-label="visitDeclaration" id="1259224725%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#1259224725%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Declaration</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1259224725%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1259224725%2FFunctions%2F-2122705810"><span class="token function">visitDeclaration</span></a><span class="token punctuation">(</span>declaration<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSDeclaration///PointingToDeclaration/">KSDeclaration</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1818718007%2FFunctions%2F-2122705810" anchor-label="visitDeclarationContainer" id="-1818718007%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1818718007%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Declaration</span><wbr><span><span>Container</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1818718007%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1818718007%2FFunctions%2F-2122705810"><span class="token function">visitDeclarationContainer</span></a><span class="token punctuation">(</span>declarationContainer<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSDeclarationContainer///PointingToDeclaration/">KSDeclarationContainer</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1125367593%2FFunctions%2F-2122705810" anchor-label="visitDynamicReference" id="1125367593%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#1125367593%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Dynamic</span><wbr><span><span>Reference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1125367593%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1125367593%2FFunctions%2F-2122705810"><span class="token function">visitDynamicReference</span></a><span class="token punctuation">(</span>reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSDynamicReference///PointingToDeclaration/">KSDynamicReference</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1886206679%2FFunctions%2F-2122705810" anchor-label="visitFile" id="-1886206679%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1886206679%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>File</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1886206679%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1886206679%2FFunctions%2F-2122705810"><span class="token function">visitFile</span></a><span class="token punctuation">(</span>file<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSFile///PointingToDeclaration/">KSFile</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1733766309%2FFunctions%2F-2122705810" anchor-label="visitFunctionDeclaration" id="1733766309%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#1733766309%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Function</span><wbr><span><span>Declaration</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1733766309%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1733766309%2FFunctions%2F-2122705810"><span class="token function">visitFunctionDeclaration</span></a><span class="token punctuation">(</span>function<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSFunctionDeclaration///PointingToDeclaration/">KSFunctionDeclaration</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1961108387%2FFunctions%2F-2122705810" anchor-label="visitModifierListOwner" id="-1961108387%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1961108387%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Modifier</span><wbr><span>List</span><wbr><span><span>Owner</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1961108387%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1961108387%2FFunctions%2F-2122705810"><span class="token function">visitModifierListOwner</span></a><span class="token punctuation">(</span>modifierListOwner<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSModifierListOwner///PointingToDeclaration/">KSModifierListOwner</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1849022027%2FFunctions%2F-2122705810" anchor-label="visitNode" id="-1849022027%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1849022027%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Node</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1849022027%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1849022027%2FFunctions%2F-2122705810"><span class="token function">visitNode</span></a><span class="token punctuation">(</span>node<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSNode///PointingToDeclaration/">KSNode</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1959755127%2FFunctions%2F-2122705810" anchor-label="visitParenthesizedReference" id="-1959755127%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1959755127%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Parenthesized</span><wbr><span><span>Reference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1959755127%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1959755127%2FFunctions%2F-2122705810"><span class="token function">visitParenthesizedReference</span></a><span class="token punctuation">(</span>reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSParenthesizedReference///PointingToDeclaration/">KSParenthesizedReference</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-304109271%2FFunctions%2F-2122705810" anchor-label="visitPropertyAccessor" id="-304109271%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-304109271%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Accessor</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-304109271%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-304109271%2FFunctions%2F-2122705810"><span class="token function">visitPropertyAccessor</span></a><span class="token punctuation">(</span>accessor<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertyAccessor///PointingToDeclaration/">KSPropertyAccessor</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1289599531%2FFunctions%2F-2122705810" anchor-label="visitPropertyDeclaration" id="1289599531%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#1289599531%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Declaration</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1289599531%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1289599531%2FFunctions%2F-2122705810"><span class="token function">visitPropertyDeclaration</span></a><span class="token punctuation">(</span>property<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertyDeclaration///PointingToDeclaration/">KSPropertyDeclaration</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1322563671%2FFunctions%2F-2122705810" anchor-label="visitPropertyGetter" id="-1322563671%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1322563671%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Getter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1322563671%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1322563671%2FFunctions%2F-2122705810"><span class="token function">visitPropertyGetter</span></a><span class="token punctuation">(</span>getter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertyGetter///PointingToDeclaration/">KSPropertyGetter</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1104604713%2FFunctions%2F-2122705810" anchor-label="visitPropertySetter" id="1104604713%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#1104604713%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Setter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1104604713%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1104604713%2FFunctions%2F-2122705810"><span class="token function">visitPropertySetter</span></a><span class="token punctuation">(</span>setter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertySetter///PointingToDeclaration/">KSPropertySetter</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-946837751%2FFunctions%2F-2122705810" anchor-label="visitReferenceElement" id="-946837751%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-946837751%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Reference</span><wbr><span><span>Element</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-946837751%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-946837751%2FFunctions%2F-2122705810"><span class="token function">visitReferenceElement</span></a><span class="token punctuation">(</span>element<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSReferenceElement///PointingToDeclaration/">KSReferenceElement</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="198934925%2FFunctions%2F-2122705810" anchor-label="visitTypeAlias" id="198934925%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#198934925%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Alias</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="198934925%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#198934925%2FFunctions%2F-2122705810"><span class="token function">visitTypeAlias</span></a><span class="token punctuation">(</span>typeAlias<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeAlias///PointingToDeclaration/">KSTypeAlias</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="716312521%2FFunctions%2F-2122705810" anchor-label="visitTypeArgument" id="716312521%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#716312521%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Argument</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="716312521%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#716312521%2FFunctions%2F-2122705810"><span class="token function">visitTypeArgument</span></a><span class="token punctuation">(</span>typeArgument<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeArgument///PointingToDeclaration/">KSTypeArgument</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1242910015%2FFunctions%2F-2122705810" anchor-label="visitTypeParameter" id="1242910015%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#1242910015%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Parameter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1242910015%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1242910015%2FFunctions%2F-2122705810"><span class="token function">visitTypeParameter</span></a><span class="token punctuation">(</span>typeParameter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeParameter///PointingToDeclaration/">KSTypeParameter</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1307167613%2FFunctions%2F-2122705810" anchor-label="visitTypeReference" id="-1307167613%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1307167613%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Reference</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1307167613%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1307167613%2FFunctions%2F-2122705810"><span class="token function">visitTypeReference</span></a><span class="token punctuation">(</span>typeReference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeReference///PointingToDeclaration/">KSTypeReference</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1653931843%2FFunctions%2F-2122705810" anchor-label="visitValueArgument" id="-1653931843%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#-1653931843%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Value</span><wbr><span><span>Argument</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1653931843%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1653931843%2FFunctions%2F-2122705810"><span class="token function">visitValueArgument</span></a><span class="token punctuation">(</span>valueArgument<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSValueArgument///PointingToDeclaration/">KSValueArgument</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1664439977%2FFunctions%2F-2122705810" anchor-label="visitValueParameter" id="1664439977%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
-                <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex">
-                        <div><a href="index.html#1664439977%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Value</span><wbr><span><span>Parameter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1664439977%2FFunctions%2F-2122705810"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1664439977%2FFunctions%2F-2122705810"><span class="token function">visitValueParameter</span></a><span class="token punctuation">(</span>valueParameter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSValueParameter///PointingToDeclaration/">KSValueParameter</span><span class="token punctuation">, </span>data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-shader-params-class-visitor.html"><span class="token function">ShaderParamsClassVisitor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-96389645%2FClasslikes%2F-2122705810" anchor-label="Companion" id="-96389645%2FClasslikes%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-96389645%2FClasslikes%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1994799243%2FFunctions%2F-2122705810" anchor-label="defaultHandler" id="1994799243%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="default-handler.html"><span>default</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994799243%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="default-handler.html"><span class="token function">defaultHandler</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSNode///PointingToDeclaration/">KSNode</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1596609199%2FFunctions%2F-2122705810" anchor-label="visitAnnotated" id="-1596609199%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1596609199%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Annotated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1596609199%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1596609199%2FFunctions%2F-2122705810"><span class="token function">visitAnnotated</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotated<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSAnnotated///PointingToDeclaration/">KSAnnotated</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-432854519%2FFunctions%2F-2122705810" anchor-label="visitAnnotation" id="-432854519%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-432854519%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Annotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-432854519%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-432854519%2FFunctions%2F-2122705810"><span class="token function">visitAnnotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotation<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSAnnotation///PointingToDeclaration/">KSAnnotation</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1298586233%2FFunctions%2F-2122705810" anchor-label="visitCallableReference" id="-1298586233%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1298586233%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Callable</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1298586233%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1298586233%2FFunctions%2F-2122705810"><span class="token function">visitCallableReference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSCallableReference///PointingToDeclaration/">KSCallableReference</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1162486043%2FFunctions%2F-2122705810" anchor-label="visitClassDeclaration" id="-1162486043%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="visit-class-declaration.html"><span>visit</span><wbr><span>Class</span><wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1162486043%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="visit-class-declaration.html"><span class="token function">visitClassDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classDeclaration<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSClassDeclaration///PointingToDeclaration/">KSClassDeclaration</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1780048395%2FFunctions%2F-2122705810" anchor-label="visitClassifierReference" id="-1780048395%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1780048395%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Classifier</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1780048395%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1780048395%2FFunctions%2F-2122705810"><span class="token function">visitClassifierReference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSClassifierReference///PointingToDeclaration/">KSClassifierReference</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1259224725%2FFunctions%2F-2122705810" anchor-label="visitDeclaration" id="1259224725%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1259224725%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1259224725%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1259224725%2FFunctions%2F-2122705810"><span class="token function">visitDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">declaration<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSDeclaration///PointingToDeclaration/">KSDeclaration</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1818718007%2FFunctions%2F-2122705810" anchor-label="visitDeclarationContainer" id="-1818718007%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1818718007%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Declaration</span><wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1818718007%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1818718007%2FFunctions%2F-2122705810"><span class="token function">visitDeclarationContainer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">declarationContainer<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSDeclarationContainer///PointingToDeclaration/">KSDeclarationContainer</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1125367593%2FFunctions%2F-2122705810" anchor-label="visitDynamicReference" id="1125367593%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1125367593%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Dynamic</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1125367593%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1125367593%2FFunctions%2F-2122705810"><span class="token function">visitDynamicReference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSDynamicReference///PointingToDeclaration/">KSDynamicReference</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1886206679%2FFunctions%2F-2122705810" anchor-label="visitFile" id="-1886206679%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1886206679%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1886206679%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1886206679%2FFunctions%2F-2122705810"><span class="token function">visitFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSFile///PointingToDeclaration/">KSFile</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1733766309%2FFunctions%2F-2122705810" anchor-label="visitFunctionDeclaration" id="1733766309%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1733766309%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Function</span><wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1733766309%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1733766309%2FFunctions%2F-2122705810"><span class="token function">visitFunctionDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSFunctionDeclaration///PointingToDeclaration/">KSFunctionDeclaration</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1961108387%2FFunctions%2F-2122705810" anchor-label="visitModifierListOwner" id="-1961108387%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1961108387%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Modifier</span><wbr><span>List</span><wbr><span><span>Owner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1961108387%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1961108387%2FFunctions%2F-2122705810"><span class="token function">visitModifierListOwner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">modifierListOwner<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSModifierListOwner///PointingToDeclaration/">KSModifierListOwner</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1849022027%2FFunctions%2F-2122705810" anchor-label="visitNode" id="-1849022027%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1849022027%2FFunctions%2F-2122705810"><span>visit</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1849022027%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1849022027%2FFunctions%2F-2122705810"><span class="token function">visitNode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">node<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSNode///PointingToDeclaration/">KSNode</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1959755127%2FFunctions%2F-2122705810" anchor-label="visitParenthesizedReference" id="-1959755127%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1959755127%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Parenthesized</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1959755127%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1959755127%2FFunctions%2F-2122705810"><span class="token function">visitParenthesizedReference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSParenthesizedReference///PointingToDeclaration/">KSParenthesizedReference</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-304109271%2FFunctions%2F-2122705810" anchor-label="visitPropertyAccessor" id="-304109271%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-304109271%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Accessor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-304109271%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-304109271%2FFunctions%2F-2122705810"><span class="token function">visitPropertyAccessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accessor<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertyAccessor///PointingToDeclaration/">KSPropertyAccessor</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1289599531%2FFunctions%2F-2122705810" anchor-label="visitPropertyDeclaration" id="1289599531%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1289599531%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1289599531%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1289599531%2FFunctions%2F-2122705810"><span class="token function">visitPropertyDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">property<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertyDeclaration///PointingToDeclaration/">KSPropertyDeclaration</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1322563671%2FFunctions%2F-2122705810" anchor-label="visitPropertyGetter" id="-1322563671%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1322563671%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Getter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1322563671%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1322563671%2FFunctions%2F-2122705810"><span class="token function">visitPropertyGetter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">getter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertyGetter///PointingToDeclaration/">KSPropertyGetter</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1104604713%2FFunctions%2F-2122705810" anchor-label="visitPropertySetter" id="1104604713%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1104604713%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Property</span><wbr><span><span>Setter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1104604713%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1104604713%2FFunctions%2F-2122705810"><span class="token function">visitPropertySetter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">setter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSPropertySetter///PointingToDeclaration/">KSPropertySetter</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-946837751%2FFunctions%2F-2122705810" anchor-label="visitReferenceElement" id="-946837751%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-946837751%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Reference</span><wbr><span><span>Element</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-946837751%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-946837751%2FFunctions%2F-2122705810"><span class="token function">visitReferenceElement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSReferenceElement///PointingToDeclaration/">KSReferenceElement</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="198934925%2FFunctions%2F-2122705810" anchor-label="visitTypeAlias" id="198934925%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#198934925%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Alias</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="198934925%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#198934925%2FFunctions%2F-2122705810"><span class="token function">visitTypeAlias</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeAlias<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeAlias///PointingToDeclaration/">KSTypeAlias</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="716312521%2FFunctions%2F-2122705810" anchor-label="visitTypeArgument" id="716312521%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#716312521%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Argument</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="716312521%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#716312521%2FFunctions%2F-2122705810"><span class="token function">visitTypeArgument</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeArgument<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeArgument///PointingToDeclaration/">KSTypeArgument</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1242910015%2FFunctions%2F-2122705810" anchor-label="visitTypeParameter" id="1242910015%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1242910015%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1242910015%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1242910015%2FFunctions%2F-2122705810"><span class="token function">visitTypeParameter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeParameter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeParameter///PointingToDeclaration/">KSTypeParameter</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1307167613%2FFunctions%2F-2122705810" anchor-label="visitTypeReference" id="-1307167613%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1307167613%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Type</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1307167613%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1307167613%2FFunctions%2F-2122705810"><span class="token function">visitTypeReference</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeReference<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSTypeReference///PointingToDeclaration/">KSTypeReference</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1653931843%2FFunctions%2F-2122705810" anchor-label="visitValueArgument" id="-1653931843%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1653931843%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Value</span><wbr><span><span>Argument</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1653931843%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1653931843%2FFunctions%2F-2122705810"><span class="token function">visitValueArgument</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">valueArgument<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSValueArgument///PointingToDeclaration/">KSValueArgument</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1664439977%2FFunctions%2F-2122705810" anchor-label="visitValueParameter" id="1664439977%2FFunctions%2F-2122705810" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":glimpse:processor-ksp:dokkaHtmlPartial/main" data-filterable-set=":glimpse:processor-ksp:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1664439977%2FFunctions%2F-2122705810"><span>visit</span><wbr><span>Value</span><wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1664439977%2FFunctions%2F-2122705810"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:processor-ksp:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1664439977%2FFunctions%2F-2122705810"><span class="token function">visitValueParameter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">valueParameter<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.symbol/KSValueParameter///PointingToDeclaration/">KSValueParameter</span><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><span data-unresolved-link="com.google.devtools.ksp.processing/CodeGenerator///PointingToDeclaration/">CodeGenerator</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  
-</body></html>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
 
+</body></html>
 
