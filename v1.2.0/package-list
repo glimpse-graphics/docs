@@ -19,6 +19,9 @@ graphics.glimpse.shaders.annotations
 graphics.glimpse.textures
 graphics.glimpse.types
 module:glimpse-hud
+graphics.glimpse.hud
+graphics.glimpse.hud.layouts
+graphics.glimpse.hud.shaders
 graphics.glimpse.hud.text
 module:glimpse-obj
 graphics.glimpse.meshes.obj
