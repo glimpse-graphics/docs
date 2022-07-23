@@ -20,6 +20,7 @@ graphics.glimpse.textures
 graphics.glimpse.types
 module:glimpse-hud
 graphics.glimpse.hud
+graphics.glimpse.hud.dsl
 graphics.glimpse.hud.layouts
 graphics.glimpse.hud.shaders
 graphics.glimpse.hud.text
