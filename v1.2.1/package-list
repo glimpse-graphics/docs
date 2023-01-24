@@ -1,0 +1,40 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:graphics.glimpse.buffers/FloatBufferData/toString/#/PointingToDeclaration/glimpse-core/graphics.glimpse.buffers/-float-buffer-data/[desktop]to-string.html
+$dokka.location:graphics.glimpse.buffers/IntBufferData/toString/#/PointingToDeclaration/glimpse-core/graphics.glimpse.buffers/-int-buffer-data/[desktop]to-string.html
+$dokka.location:graphics.glimpse.meshes.obj//parseArrayMeshData/graphics.glimpse.meshes.obj.ObjMeshDataParser#java.io.File/PointingToDeclaration/glimpse-obj/graphics.glimpse.meshes.obj/[desktop]parse-array-mesh-data.html
+$dokka.location:graphics.glimpse.meshes.obj//parseArrayMeshData/graphics.glimpse.meshes.obj.ObjMeshDataParser#java.io.InputStream/PointingToDeclaration/glimpse-obj/graphics.glimpse.meshes.obj/[desktop]parse-array-mesh-data.html
+$dokka.location:graphics.glimpse.textures//fromFile/graphics.glimpse.textures.TextureImageSourceBuilder#java.io.File/PointingToDeclaration/glimpse-core/graphics.glimpse.textures/[desktop]from-file.html
+module:glimpse-core
+graphics.glimpse
+graphics.glimpse.buffers
+graphics.glimpse.cameras
+graphics.glimpse.framebuffers
+graphics.glimpse.lenses
+graphics.glimpse.logging
+graphics.glimpse.meshes
+graphics.glimpse.models
+graphics.glimpse.shaders
+graphics.glimpse.shaders.annotations
+graphics.glimpse.textures
+graphics.glimpse.types
+module:glimpse-hud
+graphics.glimpse.hud
+graphics.glimpse.hud.dsl
+graphics.glimpse.hud.layouts
+graphics.glimpse.hud.shaders
+graphics.glimpse.hud.text
+module:glimpse-obj
+graphics.glimpse.meshes.obj
+module:glimpse-offscreen
+graphics.glimpse.offscreen
+graphics.glimpse.offscreen.egl
+graphics.glimpse.offscreen.gl
+module:glimpse-processor-ksp
+graphics.glimpse.ksp
+graphics.glimpse.ksp.poet
+module:glimpse-ui
+graphics.glimpse.ui
+module:glimpse-ui-compose
+graphics.glimpse.ui.compose
+graphics.glimpse.ui.compose.types
