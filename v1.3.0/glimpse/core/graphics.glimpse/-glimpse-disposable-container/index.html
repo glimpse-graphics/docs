@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>GlimpseDisposableContainer</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -40,120 +49,112 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-core::graphics.glimpse/GlimpseDisposableContainer///PointingToDeclaration//761584051">
-  <div class="breadcrumbs"><a href="../../index.html">glimpse-core</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse</a><span class="delimiter">/</span><a href="index.html">GlimpseDisposableContainer</a></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="glimpse-core::graphics.glimpse/GlimpseDisposableContainer///PointingToDeclaration//761584051">
+  <div class="breadcrumbs"><a href="../../index.html">glimpse-core</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse</a><span class="delimiter">/</span><span class="current">GlimpseDisposableContainer</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Glimpse</span><wbr><span>Disposable</span><wbr><span><span>Container</span></span></h1>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GlimpseDisposableContainer</a> : <a href="../-glimpse-disposable/index.html">GlimpseDisposable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A disposable container for disposable Glimpse objects.</p><p class="paragraph">After disposed, this container becomes empty and ready to be filled again. Thus, <a href="is-disposed.html">isDisposed</a> is always <code class="lang-kotlin">false</code> for this object.</p><h4 class="">Since</h4><p class="paragraph">v1.2.0</p></div>    </div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GlimpseDisposableContainer</a> : <a href="../-glimpse-disposable/index.html">GlimpseDisposable</a></div><p class="paragraph">A disposable container for disposable Glimpse objects.</p><p class="paragraph">After disposed, this container becomes empty and ready to be filled again. Thus, <a href="is-disposed.html">isDisposed</a> is always <code class="lang-kotlin">false</code> for this object.</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">v1.2.0</p></span></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="358257255%2FConstructors%2F761584051" anchor-label="GlimpseDisposableContainer" id="358257255%2FConstructors%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-glimpse-disposable-container.html"><span>Glimpse</span><wbr><span>Disposable</span><wbr><span><span>Container</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="358257255%2FConstructors%2F761584051" anchor-label="GlimpseDisposableContainer" id="358257255%2FConstructors%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-glimpse-disposable-container.html"><span>Glimpse</span><wbr><span>Disposable</span><wbr><span><span>Container</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="358257255%2FConstructors%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-glimpse-disposable-container.html"><span class="token function">GlimpseDisposableContainer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="1468218345%2FFunctions%2F761584051" anchor-label="add" id="1468218345%2FFunctions%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add.html"><span><span>add</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1468218345%2FFunctions%2F761584051" anchor-label="add" id="1468218345%2FFunctions%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add.html"><span><span>add</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1468218345%2FFunctions%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add.html"><span class="token function">add</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">disposable<span class="token operator">: </span><a href="../-glimpse-disposable/index.html">GlimpseDisposable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds given <a href="add.html">disposable</a> to this container.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add.html"><span class="token function">add</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">disposable<span class="token operator">: </span><a href="../-glimpse-disposable/index.html">GlimpseDisposable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Adds given <a href="add.html">disposable</a> to this container.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="737979406%2FFunctions%2F761584051" anchor-label="addAll" id="737979406%2FFunctions%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-all.html"><span>add</span><wbr><span><span>All</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-all.html"><span>add</span><wbr><span><span>All</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="737979406%2FFunctions%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-all.html"><span class="token function">addAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">disposables<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-glimpse-disposable/index.html">GlimpseDisposable</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds all <a href="add-all.html">disposables</a> from given collection to this container.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-all.html"><span class="token function">addAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">disposables<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-glimpse-disposable/index.html">GlimpseDisposable</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Adds all <a href="add-all.html">disposables</a> from given collection to this container.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1387076648%2FFunctions%2F761584051" anchor-label="dispose" id="1387076648%2FFunctions%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="dispose.html"><span><span>dispose</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dispose.html"><span><span>dispose</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1387076648%2FFunctions%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="dispose.html"><span class="token function">dispose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../-glimpse-adapter/index.html">GlimpseAdapter</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Disposes all disposables in this container.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="dispose.html"><span class="token function">dispose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../-glimpse-adapter/index.html">GlimpseAdapter</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disposes all disposables in this container.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-783042362%2FFunctions%2F761584051" anchor-label="disposeUndisposed" id="-783042362%2FFunctions%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="dispose-undisposed.html"><span>dispose</span><wbr><span><span>Undisposed</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dispose-undisposed.html"><span>dispose</span><wbr><span><span>Undisposed</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-783042362%2FFunctions%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="dispose-undisposed.html"><span class="token function">disposeUndisposed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../-glimpse-adapter/index.html">GlimpseAdapter</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Disposes all undisposed disposables in this container.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="dispose-undisposed.html"><span class="token function">disposeUndisposed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../-glimpse-adapter/index.html">GlimpseAdapter</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disposes all undisposed disposables in this container.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="49556448%2FProperties%2F761584051" anchor-label="isDisposed" id="49556448%2FProperties%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="is-disposed.html"><span>is</span><wbr><span><span>Disposed</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="49556448%2FProperties%2F761584051" anchor-label="isDisposed" id="49556448%2FProperties%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-disposed.html"><span>is</span><wbr><span><span>Disposed</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="49556448%2FProperties%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><a data-name="49556448%2FProperties%2F761584051" anchor-label="isDisposed" id="49556448%2FProperties%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="is-disposed.html">isDisposed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="49556448%2FProperties%2F761584051" anchor-label="isDisposed" id="49556448%2FProperties%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Always <code class="lang-kotlin">false</code>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="is-disposed.html">isDisposed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Always <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -167,6 +168,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>graphics.glimpse.textures</title>
 <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -42,339 +51,321 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-core::graphics.glimpse.textures////PointingToDeclaration//39937529">
-  <div class="breadcrumbs"><a href="../index.html">glimpse-core</a><span class="delimiter">/</span><a href="index.html">graphics.glimpse.textures</a></div>
+<div class="main-content" data-page-type="package" id="content" pageids="glimpse-core::graphics.glimpse.textures////PointingToDeclaration//39937529">
+  <div class="breadcrumbs"><a href="../index.html">glimpse-core</a><span class="delimiter">/</span><span class="current">graphics.glimpse.textures</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>Package</span></span> <span>graphics.</span><wbr><span>glimpse.</span><wbr><span>textures</span></h1>
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
     <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><p class="paragraph">Textures and texture-related enums.</p></div><div class="content sourceset-depenent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><p class="paragraph">Textures and texture-related enums.</p></div><div class="content sourceset-depenent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><p class="paragraph">Textures and texture-related enums.</p></div>    </div>
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><p class="paragraph">Textures and texture-related enums.</p></div><div class="content sourceset-dependent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><p class="paragraph">Textures and texture-related enums.</p></div><div class="content sourceset-dependent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><p class="paragraph">Textures and texture-related enums.</p></div>    </div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="-2107139214%2FClasslikes%2F1975256519" anchor-label="BitmapProvider" id="-2107139214%2FClasslikes%2F1975256519" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bitmap-provider/index.html"><span>Bitmap</span><wbr><span><span>Provider</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-2107139214%2FClasslikes%2F1975256519" anchor-label="BitmapProvider" id="-2107139214%2FClasslikes%2F1975256519" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bitmap-provider/index.html"><span>Bitmap</span><wbr><span><span>Provider</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2107139214%2FClasslikes%2F1975256519"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-bitmap-provider/index.html">BitmapProvider</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Bitmap provider.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-bitmap-provider/index.html">BitmapProvider</a></div><div class="brief "><p class="paragraph">Bitmap provider.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1106247581%2FClasslikes%2F1748343725" anchor-label="BufferedImageProvider" id="-1106247581%2FClasslikes%2F1748343725" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-buffered-image-provider/index.html"><span>Buffered</span><wbr><span>Image</span><wbr><span><span>Provider</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-buffered-image-provider/index.html"><span>Buffered</span><wbr><span>Image</span><wbr><span><span>Provider</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1106247581%2FClasslikes%2F1748343725"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-buffered-image-provider/index.html">BufferedImageProvider</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Buffered image provider.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-buffered-image-provider/index.html">BufferedImageProvider</a></div><div class="brief "><p class="paragraph">Buffered image provider.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="2116435730%2FClasslikes%2F761584051" anchor-label="CubemapSide" id="2116435730%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-cubemap-side/index.html"><span>Cubemap</span><wbr><span><span>Side</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cubemap-side/index.html"><span>Cubemap</span><wbr><span><span>Side</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2116435730%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-cubemap-side/index.html">CubemapSide</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-cubemap-side/index.html">CubemapSide</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Cubemap texture side.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-cubemap-side/index.html">CubemapSide</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-cubemap-side/index.html">CubemapSide</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Cubemap texture side.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="118933898%2FClasslikes%2F761584051" anchor-label="EmptyTexturePresets" id="118933898%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-empty-texture-presets/index.html"><span>Empty</span><wbr><span>Texture</span><wbr><span><span>Presets</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-empty-texture-presets/index.html"><span>Empty</span><wbr><span>Texture</span><wbr><span><span>Presets</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="118933898%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-empty-texture-presets/index.html">EmptyTexturePresets</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>internalFormat<span class="token operator">: </span><a href="-texture-internal-format/index.html">TextureInternalFormat</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>pixelFormat<span class="token operator">: </span><a href="-texture-pixel-format/index.html">TexturePixelFormat</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>pixelType<span class="token operator">: </span><a href="-texture-pixel-type/index.html">TexturePixelType</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Empty texture presets.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-empty-texture-presets/index.html">EmptyTexturePresets</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>internalFormat<span class="token operator">: </span><a href="-texture-internal-format/index.html">TextureInternalFormat</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pixelFormat<span class="token operator">: </span><a href="-texture-pixel-format/index.html">TexturePixelFormat</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pixelType<span class="token operator">: </span><a href="-texture-pixel-type/index.html">TexturePixelType</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Empty texture presets.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-526167627%2FClasslikes%2F1748343725" anchor-label="InputStreamProvider" id="-526167627%2FClasslikes%2F1748343725" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-input-stream-provider/index.html"><span>Input</span><wbr><span>Stream</span><wbr><span><span>Provider</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-input-stream-provider/index.html"><span>Input</span><wbr><span>Stream</span><wbr><span><span>Provider</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-526167627%2FClasslikes%2F1748343725"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-input-stream-provider/index.html">InputStreamProvider</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Input stream provider.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-input-stream-provider/index.html">InputStreamProvider</a></div><div class="brief "><p class="paragraph">Input stream provider.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="516516629%2FClasslikes%2F761584051" anchor-label="Texture" id="516516629%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture/index.html"><span><span>Texture</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture/index.html"><span><span>Texture</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="516516629%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-texture/index.html">Texture</a> : <a href="../graphics.glimpse/-glimpse-disposable/index.html">GlimpseDisposable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A texture.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-texture/index.html">Texture</a> : <a href="../graphics.glimpse/-glimpse-disposable/index.html">GlimpseDisposable</a></div><div class="brief "><p class="paragraph">A texture.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="453328471%2FClasslikes%2F761584051" anchor-label="TextureImageSource" id="453328471%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-image-source/index.html"><span>Texture</span><wbr><span>Image</span><wbr><span><span>Source</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-image-source/index.html"><span>Texture</span><wbr><span>Image</span><wbr><span><span>Source</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="453328471%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-texture-image-source/index.html">TextureImageSource</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture image source.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-texture-image-source/index.html">TextureImageSource</a></div><div class="brief "><p class="paragraph">Texture image source.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="342581296%2FClasslikes%2F39937529" anchor-label="TextureImageSourceBuilder" id="342581296%2FClasslikes%2F39937529" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain :glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain :glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain :glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-image-source-builder/index.html"><span>Texture</span><wbr><span>Image</span><wbr><span>Source</span><wbr><span><span>Builder</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain :glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain :glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-image-source-builder/index.html"><span>Texture</span><wbr><span>Image</span><wbr><span>Source</span><wbr><span><span>Builder</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="342581296%2FClasslikes%2F39937529"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A builder for a <a href="../../../glimpse/core/graphics.glimpse.textures/-texture-image-source/index.html">TextureImageSource</a>.</p></div></div><div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A builder for a <a href="-texture-image-source/index.html">TextureImageSource</a>.</p></div></div><div class="content sourceset-depenent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A builder for a <a href="../../../glimpse/core/graphics.glimpse.textures/-texture-image-source/index.html">TextureImageSource</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">A builder for a <a href="../../../glimpse/core/graphics.glimpse.textures/-texture-image-source/index.html">TextureImageSource</a>.</p></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">A builder for a <a href="-texture-image-source/index.html">TextureImageSource</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">A builder for a <a href="../../../glimpse/core/graphics.glimpse.textures/-texture-image-source/index.html">TextureImageSource</a>.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1922226529%2FClasslikes%2F761584051" anchor-label="TextureInternalFormat" id="1922226529%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-internal-format/index.html"><span>Texture</span><wbr><span>Internal</span><wbr><span><span>Format</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-internal-format/index.html"><span>Texture</span><wbr><span>Internal</span><wbr><span><span>Format</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1922226529%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-internal-format/index.html">TextureInternalFormat</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-internal-format/index.html">TextureInternalFormat</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture color components.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-internal-format/index.html">TextureInternalFormat</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-internal-format/index.html">TextureInternalFormat</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Texture color components.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1971843490%2FClasslikes%2F761584051" anchor-label="TextureMagFilter" id="1971843490%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-mag-filter/index.html"><span>Texture</span><wbr><span>Mag</span><wbr><span><span>Filter</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-mag-filter/index.html"><span>Texture</span><wbr><span>Mag</span><wbr><span><span>Filter</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1971843490%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-mag-filter/index.html">TextureMagFilter</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-mag-filter/index.html">TextureMagFilter</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture magnifying function.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-mag-filter/index.html">TextureMagFilter</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-mag-filter/index.html">TextureMagFilter</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Texture magnifying function.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="496472259%2FClasslikes%2F761584051" anchor-label="TextureMinFilter" id="496472259%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-min-filter/index.html"><span>Texture</span><wbr><span>Min</span><wbr><span><span>Filter</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-min-filter/index.html"><span>Texture</span><wbr><span>Min</span><wbr><span><span>Filter</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="496472259%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-min-filter/index.html">TextureMinFilter</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-min-filter/index.html">TextureMinFilter</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture minifying function.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-min-filter/index.html">TextureMinFilter</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-min-filter/index.html">TextureMinFilter</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Texture minifying function.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1377595248%2FClasslikes%2F761584051" anchor-label="TexturePixelFormat" id="1377595248%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-pixel-format/index.html"><span>Texture</span><wbr><span>Pixel</span><wbr><span><span>Format</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-pixel-format/index.html"><span>Texture</span><wbr><span>Pixel</span><wbr><span><span>Format</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1377595248%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-pixel-format/index.html">TexturePixelFormat</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-pixel-format/index.html">TexturePixelFormat</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture pixel data format.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-pixel-format/index.html">TexturePixelFormat</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-pixel-format/index.html">TexturePixelFormat</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Texture pixel data format.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-468068595%2FClasslikes%2F761584051" anchor-label="TexturePixelType" id="-468068595%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-pixel-type/index.html"><span>Texture</span><wbr><span>Pixel</span><wbr><span><span>Type</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-pixel-type/index.html"><span>Texture</span><wbr><span>Pixel</span><wbr><span><span>Type</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-468068595%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-pixel-type/index.html">TexturePixelType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-pixel-type/index.html">TexturePixelType</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture pixel data type.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-pixel-type/index.html">TexturePixelType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-pixel-type/index.html">TexturePixelType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Texture pixel data type.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-320540933%2FClasslikes%2F761584051" anchor-label="TextureType" id="-320540933%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-type/index.html"><span>Texture</span><wbr><span><span>Type</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-type/index.html"><span>Texture</span><wbr><span><span>Type</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-320540933%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-type/index.html">TextureType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-type/index.html">TextureType</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture type.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-type/index.html">TextureType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-type/index.html">TextureType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Texture type.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1951137813%2FClasslikes%2F761584051" anchor-label="TextureWrap" id="-1951137813%2FClasslikes%2F761584051" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-texture-wrap/index.html"><span>Texture</span><wbr><span><span>Wrap</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-texture-wrap/index.html"><span>Texture</span><wbr><span><span>Wrap</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1951137813%2FClasslikes%2F761584051"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-wrap/index.html">TextureWrap</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-wrap/index.html">TextureWrap</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Texture wrap parameter.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-texture-wrap/index.html">TextureWrap</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-texture-wrap/index.html">TextureWrap</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Texture wrap parameter.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-11623563%2FFunctions%2F1975256519" anchor-label="fromAsset" id="-11623563%2FFunctions%2F1975256519" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="from-asset.html"><span>from</span><wbr><span><span>Asset</span></span></a></div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-11623563%2FFunctions%2F1975256519" anchor-label="fromAsset" id="-11623563%2FFunctions%2F1975256519" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from-asset.html"><span>from</span><wbr><span><span>Asset</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-11623563%2FFunctions%2F1975256519"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="from-asset.html"><span class="token function">fromAsset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fileName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Will build a texture source from an asset with a given <a href="from-asset.html">fileName</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="from-asset.html"><span class="token function">fromAsset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fileName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">Will build a texture source from an asset with a given <a href="from-asset.html">fileName</a>.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1460308362%2FFunctions%2F1748343725" anchor-label="fromBufferedImage" id="-1460308362%2FFunctions%2F1748343725" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="from-buffered-image.html"><span>from</span><wbr><span>Buffered</span><wbr><span><span>Image</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from-buffered-image.html"><span>from</span><wbr><span>Buffered</span><wbr><span><span>Image</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1460308362%2FFunctions%2F1748343725"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="from-buffered-image.html"><span class="token function">fromBufferedImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bufferedImage<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Will build a texture source from a given <a href="from-buffered-image.html">bufferedImage</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="from-buffered-image.html"><span class="token function">fromBufferedImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bufferedImage<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">Will build a texture source from a given <a href="from-buffered-image.html">bufferedImage</a>.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1512148287%2FFunctions%2F-100968216" anchor-label="fromFile" id="1512148287%2FFunctions%2F-100968216" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../../glimpse/core/graphics.glimpse.textures/[desktop]from-file.html"><span>from</span><wbr><span><span>File</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain :glimpse:core:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../glimpse/core/graphics.glimpse.textures/[desktop]from-file.html"><span>from</span><wbr><span><span>File</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1512148287%2FFunctions%2F-100968216"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="[android]from-file.html"><span class="token function">fromFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/File.html">File</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Will build a texture source from a given <a href="[android]from-file.html">file</a>.</p></div></div><div class="content sourceset-depenent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="[desktop]from-file.html"><span class="token function">fromFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/File.html">File</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Will build a texture source from a given <a href="[desktop]from-file.html">file</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="[android]from-file.html"><span class="token function">fromFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/File.html">File</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">Will build a texture source from a given <a href="[android]from-file.html">file</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="[desktop]from-file.html"><span class="token function">fromFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/File.html">File</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">Will build a texture source from a given <a href="[desktop]from-file.html">file</a>.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1290000241%2FFunctions%2F1748343725" anchor-label="fromResource" id="-1290000241%2FFunctions%2F1748343725" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="from-resource.html"><span>from</span><wbr><span><span>Resource</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from-resource.html"><span>from</span><wbr><span><span>Resource</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1290000241%2FFunctions%2F1748343725"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="from-resource.html"><span class="token function">fromResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">owner<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Will build a texture source from a resource with a given <a href="from-resource.html">name</a>, associated with a given <a href="from-resource.html">owner</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:core:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:core:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:core:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:core:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a><span class="token punctuation">.</span><a href="from-resource.html"><span class="token function">fromResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">owner<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-texture-image-source-builder/index.html">TextureImageSourceBuilder</a></div><div class="brief "><p class="paragraph">Will build a texture source from a resource with a given <a href="from-resource.html">name</a>, associated with a given <a href="from-resource.html">owner</a>.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -388,6 +379,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

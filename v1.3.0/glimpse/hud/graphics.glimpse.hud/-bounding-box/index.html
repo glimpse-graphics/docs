@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>BoundingBox</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -40,171 +49,157 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-hud::graphics.glimpse.hud/BoundingBox///PointingToDeclaration//909697615">
-  <div class="breadcrumbs"><a href="../../index.html">glimpse-hud</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.hud</a><span class="delimiter">/</span><a href="index.html">BoundingBox</a></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="glimpse-hud::graphics.glimpse.hud/BoundingBox///PointingToDeclaration//909697615">
+  <div class="breadcrumbs"><a href="../../index.html">glimpse-hud</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.hud</a><span class="delimiter">/</span><span class="current">BoundingBox</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Bounding</span><wbr><span><span>Box</span></span></h1>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">BoundingBox</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>left<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>right<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>top<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>bottom<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Bounding box of an element of HUD.</p></div>    </div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">BoundingBox</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>left<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>right<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>top<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bottom<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">Bounding box of an element of HUD.</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-868293071%2FConstructors%2F909697615" anchor-label="BoundingBox" id="-868293071%2FConstructors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bounding-box.html"><span>Bounding</span><wbr><span><span>Box</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-868293071%2FConstructors%2F909697615" anchor-label="BoundingBox" id="-868293071%2FConstructors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bounding-box.html"><span>Bounding</span><wbr><span><span>Box</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-868293071%2FConstructors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-bounding-box.html"><span class="token function">BoundingBox</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;left<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;right<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;top<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;bottom<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">left<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">right<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">top<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">bottom<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="1489947176%2FFunctions%2F909697615" anchor-label="contains" id="1489947176%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="contains.html"><span><span>contains</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1489947176%2FFunctions%2F909697615" anchor-label="contains" id="1489947176%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="contains.html"><span><span>contains</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1489947176%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">point<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns <code class="lang-kotlin">true</code> if given <a href="contains.html">point</a> is inside this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">point<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns <code class="lang-kotlin">true</code> if given <a href="contains.html">point</a> is inside this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-589334214%2FProperties%2F909697615" anchor-label="bottom" id="-589334214%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="bottom.html"><span><span>bottom</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-589334214%2FProperties%2F909697615" anchor-label="bottom" id="-589334214%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bottom.html"><span><span>bottom</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-589334214%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="-589334214%2FProperties%2F909697615" anchor-label="bottom" id="-589334214%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="bottom.html">bottom</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-589334214%2FProperties%2F909697615" anchor-label="bottom" id="-589334214%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Y coordinate of the bottom side of this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="bottom.html">bottom</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Y coordinate of the bottom side of this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-834464322%2FProperties%2F909697615" anchor-label="height" id="-834464322%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="height.html"><span><span>height</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-834464322%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="-834464322%2FProperties%2F909697615" anchor-label="height" id="-834464322%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-834464322%2FProperties%2F909697615" anchor-label="height" id="-834464322%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Height of this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Height of this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1875588318%2FProperties%2F909697615" anchor-label="left" id="1875588318%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="left.html"><span><span>left</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="left.html"><span><span>left</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1875588318%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="1875588318%2FProperties%2F909697615" anchor-label="left" id="1875588318%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="left.html">left</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1875588318%2FProperties%2F909697615" anchor-label="left" id="1875588318%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">X coordinate of the left side of this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="left.html">left</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">X coordinate of the left side of this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-735105091%2FProperties%2F909697615" anchor-label="midpoint" id="-735105091%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="midpoint.html"><span><span>midpoint</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="midpoint.html"><span><span>midpoint</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-735105091%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="-735105091%2FProperties%2F909697615" anchor-label="midpoint" id="-735105091%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="midpoint.html">midpoint</a><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-735105091%2FProperties%2F909697615" anchor-label="midpoint" id="-735105091%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Midpoint of this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="midpoint.html">midpoint</a><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">Midpoint of this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-752896295%2FProperties%2F909697615" anchor-label="right" id="-752896295%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="right.html"><span><span>right</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="right.html"><span><span>right</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-752896295%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="-752896295%2FProperties%2F909697615" anchor-label="right" id="-752896295%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="right.html">right</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-752896295%2FProperties%2F909697615" anchor-label="right" id="-752896295%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">X coordinate of the right side of this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="right.html">right</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">X coordinate of the right side of this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1524246464%2FProperties%2F909697615" anchor-label="top" id="1524246464%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="top.html"><span><span>top</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="top.html"><span><span>top</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1524246464%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="1524246464%2FProperties%2F909697615" anchor-label="top" id="1524246464%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="top.html">top</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1524246464%2FProperties%2F909697615" anchor-label="top" id="1524246464%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Y coordinate of the top side of this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="top.html">top</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Y coordinate of the top side of this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1649877393%2FProperties%2F909697615" anchor-label="width" id="-1649877393%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="width.html"><span><span>width</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1649877393%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="-1649877393%2FProperties%2F909697615" anchor-label="width" id="-1649877393%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1649877393%2FProperties%2F909697615" anchor-label="width" id="-1649877393%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Width of this bounding box.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Width of this bounding box.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -218,6 +213,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

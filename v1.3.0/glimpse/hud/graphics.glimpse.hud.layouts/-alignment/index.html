@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Alignment</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -40,270 +49,151 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-hud::graphics.glimpse.hud.layouts/Alignment///PointingToDeclaration//909697615">
-  <div class="breadcrumbs"><a href="../../index.html">glimpse-hud</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.hud.layouts</a><span class="delimiter">/</span><a href="index.html">Alignment</a></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="glimpse-hud::graphics.glimpse.hud.layouts/Alignment///PointingToDeclaration//909697615">
+  <div class="breadcrumbs"><a href="../../index.html">glimpse-hud</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.hud.layouts</a><span class="delimiter">/</span><span class="current">Alignment</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Alignment</span></span></h1>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Alignment of an element inside a layout.</p></div>    </div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">Alignment</a></div><p class="paragraph">Alignment of an element inside a layout.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-top-left/index.html">TopLeft</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-top/index.html">Top</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-top-right/index.html">TopRight</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-left/index.html">Left</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-center/index.html">Center</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-right/index.html">Right</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-bottom-left/index.html">BottomLeft</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-bottom/index.html">Bottom</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-bottom-right/index.html">BottomRight</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="-345950746%2FClasslikes%2F909697615" anchor-label="Bottom" id="-345950746%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bottom/index.html"><span><span>Bottom</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-345950746%2FClasslikes%2F909697615" anchor-label="Bottom" id="-345950746%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bottom/index.html"><span><span>Bottom</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-345950746%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-bottom/index.html">Bottom</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Bottom alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-bottom/index.html">Bottom</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Bottom alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-2084148961%2FClasslikes%2F909697615" anchor-label="BottomLeft" id="-2084148961%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bottom-left/index.html"><span>Bottom</span><wbr><span><span>Left</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bottom-left/index.html"><span>Bottom</span><wbr><span><span>Left</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2084148961%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-bottom-left/index.html">BottomLeft</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Bottom-left alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-bottom-left/index.html">BottomLeft</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Bottom-left alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-598073056%2FClasslikes%2F909697615" anchor-label="BottomRight" id="-598073056%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bottom-right/index.html"><span>Bottom</span><wbr><span><span>Right</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bottom-right/index.html"><span>Bottom</span><wbr><span><span>Right</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-598073056%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-bottom-right/index.html">BottomRight</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Bottom-right alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-bottom-right/index.html">BottomRight</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Bottom-right alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-843061508%2FClasslikes%2F909697615" anchor-label="Center" id="-843061508%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-center/index.html"><span><span>Center</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-center/index.html"><span><span>Center</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-843061508%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-center/index.html">Center</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Center alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-center/index.html">Center</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Center alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="880418698%2FClasslikes%2F909697615" anchor-label="Left" id="880418698%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-left/index.html"><span><span>Left</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-left/index.html"><span><span>Left</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="880418698%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-left/index.html">Left</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Left alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-left/index.html">Left</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Left alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1109211157%2FClasslikes%2F909697615" anchor-label="Right" id="1109211157%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-right/index.html"><span><span>Right</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-right/index.html"><span><span>Right</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1109211157%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-right/index.html">Right</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Right alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-right/index.html">Right</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Right alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="575453948%2FClasslikes%2F909697615" anchor-label="Top" id="575453948%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-top/index.html"><span><span>Top</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-top/index.html"><span><span>Top</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="575453948%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-top/index.html">Top</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Top alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-top/index.html">Top</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Top alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1600294091%2FClasslikes%2F909697615" anchor-label="TopLeft" id="-1600294091%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-top-left/index.html"><span>Top</span><wbr><span><span>Left</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-top-left/index.html"><span>Top</span><wbr><span><span>Left</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1600294091%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-top-left/index.html">TopLeft</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Top-left alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-top-left/index.html">TopLeft</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Top-left alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1516526026%2FClasslikes%2F909697615" anchor-label="TopRight" id="1516526026%2FClasslikes%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-top-right/index.html"><span>Top</span><wbr><span><span>Right</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-top-right/index.html"><span>Top</span><wbr><span><span>Right</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1516526026%2FClasslikes%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-top-right/index.html">TopRight</a> : <a href="index.html">Alignment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Top-right alignment.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-top-right/index.html">TopRight</a> : <a href="index.html">Alignment</a></div><div class="brief "><p class="paragraph">Top-right alignment.</p></div></div></div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Inheritors</h2>
-      <div class="table" data-togglable="Inheritors"><a data-name="-1600294091%2FInheritors%2F909697615" anchor-label="TopLeft" id="-1600294091%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-top-left/index.html">TopLeft</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1600294091%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="575453948%2FInheritors%2F909697615" anchor-label="Top" id="575453948%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-top/index.html">Top</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="575453948%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="1516526026%2FInheritors%2F909697615" anchor-label="TopRight" id="1516526026%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-top-right/index.html">TopRight</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1516526026%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="880418698%2FInheritors%2F909697615" anchor-label="Left" id="880418698%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-left/index.html">Left</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="880418698%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="-843061508%2FInheritors%2F909697615" anchor-label="Center" id="-843061508%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-center/index.html">Center</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-843061508%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="1109211157%2FInheritors%2F909697615" anchor-label="Right" id="1109211157%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-right/index.html">Right</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1109211157%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="-2084148961%2FInheritors%2F909697615" anchor-label="BottomLeft" id="-2084148961%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bottom-left/index.html">BottomLeft</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2084148961%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="-345950746%2FInheritors%2F909697615" anchor-label="Bottom" id="-345950746%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bottom/index.html">Bottom</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-345950746%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
-          </div>
-        </div>
-<a data-name="-598073056%2FInheritors%2F909697615" anchor-label="BottomRight" id="-598073056%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-bottom-right/index.html">BottomRight</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-598073056%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -315,6 +205,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

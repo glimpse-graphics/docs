@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>HudLayout</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -40,252 +49,215 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-hud::graphics.glimpse.hud.layouts/HudLayout///PointingToDeclaration//909697615">
-  <div class="breadcrumbs"><a href="../../index.html">glimpse-hud</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.hud.layouts</a><span class="delimiter">/</span><a href="index.html">HudLayout</a></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="glimpse-hud::graphics.glimpse.hud.layouts/HudLayout///PointingToDeclaration//909697615">
+  <div class="breadcrumbs"><a href="../../index.html">glimpse-hud</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.hud.layouts</a><span class="delimiter">/</span><span class="current">HudLayout</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Hud</span><wbr><span><span>Layout</span></span></h1>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">HudLayout</a> : <a href="../../graphics.glimpse.hud/-hud-element/index.html">HudElement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A layout for elements of HUD.</p><p class="paragraph">A layout arranges positions and possibly sizes of its elements.</p></div>    </div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">HudLayout</a> : <a href="../../graphics.glimpse.hud/-hud-element/index.html">HudElement</a></div><p class="paragraph">A layout for elements of HUD.</p><p class="paragraph">A layout arranges positions and possibly sizes of its elements.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-base-hud-layout/index.html">BaseHudLayout</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-117406385%2FFunctions%2F909697615" anchor-label="addElement" id="-117406385%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="add-element.html"><span>add</span><wbr><span><span>Element</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-117406385%2FFunctions%2F909697615" anchor-label="addElement" id="-117406385%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-element.html"><span>add</span><wbr><span><span>Element</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-117406385%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-element.html"><span class="token function">addElement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/index.html">HudElement</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds given <a href="add-element.html">element</a> to this layout.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="add-element.html"><span class="token function">addElement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/index.html">HudElement</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds given <a href="add-element.html">element</a> to this layout.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="125715348%2FFunctions%2F909697615" anchor-label="addInputEventListener" id="125715348%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../graphics.glimpse.hud/-hud-element/add-input-event-listener.html"><span>add</span><wbr><span>Input</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../graphics.glimpse.hud/-hud-element/add-input-event-listener.html"><span>add</span><wbr><span>Input</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="125715348%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../graphics.glimpse.hud/-hud-element/add-input-event-listener.html"><span class="token function">addInputEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/-input-event-listener/index.html">HudElement.InputEventListener</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds given input events <a href="../../graphics.glimpse.hud/-hud-element/add-input-event-listener.html">listener</a> to this element.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../graphics.glimpse.hud/-hud-element/add-input-event-listener.html"><span class="token function">addInputEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/-input-event-listener/index.html">HudElement.InputEventListener</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds given input events <a href="../../graphics.glimpse.hud/-hud-element/add-input-event-listener.html">listener</a> to this element.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="411786096%2FFunctions%2F909697615" anchor-label="handleInputEvent" id="411786096%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html"><span>handle</span><wbr><span>Input</span><wbr><span><span>Event</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html"><span>handle</span><wbr><span>Input</span><wbr><span><span>Event</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="411786096%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html"><span class="token function">handleInputEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">position<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">event<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Handles given input <a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html">event</a> at given <a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html">position</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html"><span class="token function">handleInputEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">position<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">event<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Handles given input <a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html">event</a> at given <a href="../../graphics.glimpse.hud/-hud-element/handle-input-event.html">position</a>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-19737543%2FFunctions%2F909697615" anchor-label="layoutElements" id="-19737543%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="layout-elements.html"><span>layout</span><wbr><span><span>Elements</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="layout-elements.html"><span>layout</span><wbr><span><span>Elements</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-19737543%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="layout-elements.html"><span class="token function">layoutElements</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Arranges this layout's elements.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="layout-elements.html"><span class="token function">layoutElements</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Arranges this layout's elements.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="240899494%2FFunctions%2F909697615" anchor-label="removeElement" id="240899494%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="remove-element.html"><span>remove</span><wbr><span><span>Element</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-element.html"><span>remove</span><wbr><span><span>Element</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="240899494%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="remove-element.html"><span class="token function">removeElement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/index.html">HudElement</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Removes given <a href="remove-element.html">element</a> from this layout.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="remove-element.html"><span class="token function">removeElement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/index.html">HudElement</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Removes given <a href="remove-element.html">element</a> from this layout.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="245619027%2FFunctions%2F909697615" anchor-label="removeElementAt" id="245619027%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="remove-element-at.html"><span>remove</span><wbr><span>Element</span><wbr><span><span>At</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-element-at.html"><span>remove</span><wbr><span>Element</span><wbr><span><span>At</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="245619027%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="remove-element-at.html"><span class="token function">removeElementAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Removes an element at the given <a href="remove-element-at.html">index</a> from this layout.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="remove-element-at.html"><span class="token function">removeElementAt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Removes an element at the given <a href="remove-element-at.html">index</a> from this layout.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1465735965%2FFunctions%2F909697615" anchor-label="removeInputEventListener" id="1465735965%2FFunctions%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../graphics.glimpse.hud/-hud-element/remove-input-event-listener.html"><span>remove</span><wbr><span>Input</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../graphics.glimpse.hud/-hud-element/remove-input-event-listener.html"><span>remove</span><wbr><span>Input</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1465735965%2FFunctions%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../graphics.glimpse.hud/-hud-element/remove-input-event-listener.html"><span class="token function">removeInputEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/-input-event-listener/index.html">HudElement.InputEventListener</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Removes given input events <a href="../../graphics.glimpse.hud/-hud-element/remove-input-event-listener.html">listener</a> from this element.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../graphics.glimpse.hud/-hud-element/remove-input-event-listener.html"><span class="token function">removeInputEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../../graphics.glimpse.hud/-hud-element/-input-event-listener/index.html">HudElement.InputEventListener</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Removes given input events <a href="../../graphics.glimpse.hud/-hud-element/remove-input-event-listener.html">listener</a> from this element.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="2038650837%2FProperties%2F909697615" anchor-label="atoms" id="2038650837%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../graphics.glimpse.hud/-hud-element/atoms.html"><span><span>atoms</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="2038650837%2FProperties%2F909697615" anchor-label="atoms" id="2038650837%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../graphics.glimpse.hud/-hud-element/atoms.html"><span><span>atoms</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2038650837%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="2038650837%2FProperties%2F909697615" anchor-label="atoms" id="2038650837%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../graphics.glimpse.hud/-hud-element/atoms.html">atoms</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../graphics.glimpse.hud/-hud-atom/index.html">HudAtom</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="2038650837%2FProperties%2F909697615" anchor-label="atoms" id="2038650837%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Atoms making up this element.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../graphics.glimpse.hud/-hud-element/atoms.html">atoms</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../graphics.glimpse.hud/-hud-atom/index.html">HudAtom</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Atoms making up this element.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1392633776%2FProperties%2F909697615" anchor-label="boundingBox" id="1392633776%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../graphics.glimpse.hud/-hud-element/bounding-box.html"><span>bounding</span><wbr><span><span>Box</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../graphics.glimpse.hud/-hud-element/bounding-box.html"><span>bounding</span><wbr><span><span>Box</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1392633776%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="1392633776%2FProperties%2F909697615" anchor-label="boundingBox" id="1392633776%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../graphics.glimpse.hud/-hud-element/bounding-box.html">boundingBox</a><span class="token operator">: </span><a href="../../graphics.glimpse.hud/-bounding-box/index.html">BoundingBox</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1392633776%2FProperties%2F909697615" anchor-label="boundingBox" id="1392633776%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Bounding box of this element.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../graphics.glimpse.hud/-hud-element/bounding-box.html">boundingBox</a><span class="token operator">: </span><a href="../../graphics.glimpse.hud/-bounding-box/index.html">BoundingBox</a></div><div class="brief "><p class="paragraph">Bounding box of this element.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="225801491%2FProperties%2F909697615" anchor-label="height" id="225801491%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="height.html"><span><span>height</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="225801491%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="225801491%2FProperties%2F909697615" anchor-label="height" id="225801491%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="225801491%2FProperties%2F909697615" anchor-label="height" id="225801491%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Height of this layout.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Height of this layout.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1801648879%2FProperties%2F909697615" anchor-label="isVisible" id="1801648879%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../graphics.glimpse.hud/-hud-element/is-visible.html"><span>is</span><wbr><span><span>Visible</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../graphics.glimpse.hud/-hud-element/is-visible.html"><span>is</span><wbr><span><span>Visible</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1801648879%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="1801648879%2FProperties%2F909697615" anchor-label="isVisible" id="1801648879%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../graphics.glimpse.hud/-hud-element/is-visible.html">isVisible</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1801648879%2FProperties%2F909697615" anchor-label="isVisible" id="1801648879%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph"><code class="lang-kotlin">true</code> if this element is visible.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../graphics.glimpse.hud/-hud-element/is-visible.html">isVisible</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph"><code class="lang-kotlin">true</code> if this element is visible.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1805552294%2FProperties%2F909697615" anchor-label="position" id="-1805552294%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../../graphics.glimpse.hud/-hud-element/position.html"><span><span>position</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../graphics.glimpse.hud/-hud-element/position.html"><span><span>position</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1805552294%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="-1805552294%2FProperties%2F909697615" anchor-label="position" id="-1805552294%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../graphics.glimpse.hud/-hud-element/position.html">position</a><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1805552294%2FProperties%2F909697615" anchor-label="position" id="-1805552294%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Position of this element.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../graphics.glimpse.hud/-hud-element/position.html">position</a><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">Position of this element.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1615675270%2FProperties%2F909697615" anchor-label="width" id="-1615675270%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="width.html"><span><span>width</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1615675270%2FProperties%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:hud:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><a data-name="-1615675270%2FProperties%2F909697615" anchor-label="width" id="-1615675270%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1615675270%2FProperties%2F909697615" anchor-label="width" id="-1615675270%2FProperties%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Width of this layout.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:hud:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Width of this layout.</p></div></div></div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Inheritors</h2>
-      <div class="table" data-togglable="Inheritors"><a data-name="-938832586%2FInheritors%2F909697615" anchor-label="BaseHudLayout" id="-938832586%2FInheritors%2F909697615" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:hud:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:hud:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-base-hud-layout/index.html">BaseHudLayout</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-938832586%2FInheritors%2F909697615"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -297,6 +269,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

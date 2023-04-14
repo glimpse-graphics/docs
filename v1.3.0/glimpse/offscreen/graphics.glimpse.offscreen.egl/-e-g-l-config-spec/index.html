@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>EGLConfigSpec</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -40,84 +49,88 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-offscreen::graphics.glimpse.offscreen.egl/EGLConfigSpec///PointingToDeclaration//-1204305713">
-  <div class="breadcrumbs"><a href="../../index.html">glimpse-offscreen</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.offscreen.egl</a><span class="delimiter">/</span><a href="index.html">EGLConfigSpec</a></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="glimpse-offscreen::graphics.glimpse.offscreen.egl/EGLConfigSpec///PointingToDeclaration//-1204305713">
+  <div class="breadcrumbs"><a href="../../index.html">glimpse-offscreen</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.offscreen.egl</a><span class="delimiter">/</span><span class="current">EGLConfigSpec</span></div>
   <div class="cover ">
     <h1 class="cover"><span>EGLConfig</span><wbr><span><span>Spec</span></span></h1>
     <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">EGLConfigSpec</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>colorChannelBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>depthBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>stencilBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">EGL config specification.</p></div>    </div>
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">EGLConfigSpec</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>colorChannelBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>depthBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stencilBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">EGL config specification.</p></div>    </div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-895549140%2FConstructors%2F-1204305713" anchor-label="EGLConfigSpec" id="-895549140%2FConstructors%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-e-g-l-config-spec.html"><span>EGLConfig</span><wbr><span><span>Spec</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-895549140%2FConstructors%2F-1204305713" anchor-label="EGLConfigSpec" id="-895549140%2FConstructors%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-g-l-config-spec.html"><span>EGLConfig</span><wbr><span><span>Spec</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-895549140%2FConstructors%2F-1204305713"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-e-g-l-config-spec.html"><span class="token function">EGLConfigSpec</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;colorChannelBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;depthBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;stencilBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorChannelBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">depthBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">stencilBits<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-813807617%2FProperties%2F-1204305713" anchor-label="colorChannelBits" id="-813807617%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="color-channel-bits.html"><span>color</span><wbr><span>Channel</span><wbr><span><span>Bits</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-813807617%2FProperties%2F-1204305713" anchor-label="colorChannelBits" id="-813807617%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-channel-bits.html"><span>color</span><wbr><span>Channel</span><wbr><span><span>Bits</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-813807617%2FProperties%2F-1204305713"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><a data-name="-813807617%2FProperties%2F-1204305713" anchor-label="colorChannelBits" id="-813807617%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="color-channel-bits.html">colorChannelBits</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-813807617%2FProperties%2F-1204305713" anchor-label="colorChannelBits" id="-813807617%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a><p class="paragraph">Number of bits per color channel, i.e. each of the following: red, green, blue, alpha.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="color-channel-bits.html">colorChannelBits</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Number of bits per color channel, i.e. each of the following: red, green, blue, alpha.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1007947692%2FProperties%2F-1204305713" anchor-label="depthBits" id="1007947692%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="depth-bits.html"><span>depth</span><wbr><span><span>Bits</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="depth-bits.html"><span>depth</span><wbr><span><span>Bits</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1007947692%2FProperties%2F-1204305713"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><a data-name="1007947692%2FProperties%2F-1204305713" anchor-label="depthBits" id="1007947692%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="depth-bits.html">depthBits</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1007947692%2FProperties%2F-1204305713" anchor-label="depthBits" id="1007947692%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a><p class="paragraph">Number of depth bits.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="depth-bits.html">depthBits</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Number of depth bits.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1111044781%2FProperties%2F-1204305713" anchor-label="stencilBits" id="-1111044781%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="stencil-bits.html"><span>stencil</span><wbr><span><span>Bits</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stencil-bits.html"><span>stencil</span><wbr><span><span>Bits</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1111044781%2FProperties%2F-1204305713"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><a data-name="-1111044781%2FProperties%2F-1204305713" anchor-label="stencilBits" id="-1111044781%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="stencil-bits.html">stencilBits</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1111044781%2FProperties%2F-1204305713" anchor-label="stencilBits" id="-1111044781%2FProperties%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a><p class="paragraph">Number of stencil bits.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="stencil-bits.html">stencilBits</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Number of stencil bits.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -131,6 +144,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>EGLDisplayWrapper</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -40,67 +49,71 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-offscreen::graphics.glimpse.offscreen.egl/EGLDisplayWrapper///PointingToDeclaration//-1204305713">
-  <div class="breadcrumbs"><a href="../../index.html">glimpse-offscreen</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.offscreen.egl</a><span class="delimiter">/</span><a href="index.html">EGLDisplayWrapper</a></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="glimpse-offscreen::graphics.glimpse.offscreen.egl/EGLDisplayWrapper///PointingToDeclaration//-1204305713">
+  <div class="breadcrumbs"><a href="../../index.html">glimpse-offscreen</a><span class="delimiter">/</span><a href="../index.html">graphics.glimpse.offscreen.egl</a><span class="delimiter">/</span><span class="current">EGLDisplayWrapper</span></div>
   <div class="cover ">
     <h1 class="cover"><span>EGLDisplay</span><wbr><span><span>Wrapper</span></span></h1>
     <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">EGLDisplayWrapper</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A wrapper for EGL display.</p></div>    </div>
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">EGLDisplayWrapper</a></div><p class="paragraph">A wrapper for EGL display.</p></div>    </div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="1229617256%2FClasslikes%2F-1204305713" anchor-label="Companion" id="1229617256%2FClasslikes%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1229617256%2FClasslikes%2F-1204305713" anchor-label="Companion" id="1229617256%2FClasslikes%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1229617256%2FClasslikes%2F-1204305713"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-538534106%2FFunctions%2F-1204305713" anchor-label="findConfig" id="-538534106%2FFunctions%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="find-config.html"><span>find</span><wbr><span><span>Config</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-538534106%2FFunctions%2F-1204305713" anchor-label="findConfig" id="-538534106%2FFunctions%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-config.html"><span>find</span><wbr><span><span>Config</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-538534106%2FFunctions%2F-1204305713"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-config.html"><span class="token function">findConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configSpec<span class="token operator">: </span><a href="../-e-g-l-config-spec/index.html">EGLConfigSpec</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-e-g-l-config-wrapper/index.html">EGLConfigWrapper</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns a wrapper for EGL config matching a given <a href="find-config.html">specification</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-config.html"><span class="token function">findConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configSpec<span class="token operator">: </span><a href="../-e-g-l-config-spec/index.html">EGLConfigSpec</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-e-g-l-config-wrapper/index.html">EGLConfigWrapper</a></div><div class="brief "><p class="paragraph">Returns a wrapper for EGL config matching a given <a href="find-config.html">specification</a>.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1153473719%2FFunctions%2F-1204305713" anchor-label="initialize" id="-1153473719%2FFunctions%2F-1204305713" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="initialize.html"><span><span>initialize</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initialize.html"><span><span>initialize</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1153473719%2FFunctions%2F-1204305713"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Initializes EGL display and returns EGL version.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:offscreen:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:offscreen:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:offscreen:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Initializes EGL display and returns EGL version.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -114,6 +127,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

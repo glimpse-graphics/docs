@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>graphics.glimpse.ui</title>
 <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -42,82 +51,82 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="glimpse-ui::graphics.glimpse.ui////PointingToDeclaration//625786564">
-  <div class="breadcrumbs"><a href="../index.html">glimpse-ui</a><span class="delimiter">/</span><a href="index.html">graphics.glimpse.ui</a></div>
+<div class="main-content" data-page-type="package" id="content" pageids="glimpse-ui::graphics.glimpse.ui////PointingToDeclaration//625786564">
+  <div class="breadcrumbs"><a href="../index.html">glimpse-ui</a><span class="delimiter">/</span><span class="current">graphics.glimpse.ui</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>Package</span></span> <span>graphics.</span><wbr><span>glimpse.</span><wbr><span>ui</span></h1>
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
     <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark common-like" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/commonMain" data-toggle=":glimpse:ui:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:ui:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><p class="paragraph">Glimpse UI components.</p></div><div class="content sourceset-depenent-content" data-togglable=":glimpse:ui:dokkaHtmlPartial/commonMain"><p class="paragraph">Glimpse UI components.</p></div><div class="content sourceset-depenent-content" data-togglable=":glimpse:ui:dokkaHtmlPartial/desktopMain"><p class="paragraph">Glimpse UI components.</p></div>    </div>
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/commonMain" data-toggle=":glimpse:ui:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-toggle=":glimpse:ui:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><p class="paragraph">Glimpse UI components.</p></div><div class="content sourceset-dependent-content" data-togglable=":glimpse:ui:dokkaHtmlPartial/commonMain"><p class="paragraph">Glimpse UI components.</p></div><div class="content sourceset-dependent-content" data-togglable=":glimpse:ui:dokkaHtmlPartial/desktopMain"><p class="paragraph">Glimpse UI components.</p></div>    </div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="1421100842%2FClasslikes%2F279797854" anchor-label="GlimpseComponent" id="1421100842%2FClasslikes%2F279797854" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/commonMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/commonMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-glimpse-component/index.html"><span>Glimpse</span><wbr><span><span>Component</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1421100842%2FClasslikes%2F279797854" anchor-label="GlimpseComponent" id="1421100842%2FClasslikes%2F279797854" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-glimpse-component/index.html"><span>Glimpse</span><wbr><span><span>Component</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1421100842%2FClasslikes%2F279797854"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/commonMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/commonMain">common</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-glimpse-component/index.html">GlimpseComponent</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An interface implemented by Glimpse UI components.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-glimpse-component/index.html">GlimpseComponent</a></div><div class="brief "><p class="paragraph">An interface implemented by Glimpse UI components.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="674214842%2FClasslikes%2F901518242" anchor-label="GlimpseFrame" id="674214842%2FClasslikes%2F901518242" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-glimpse-frame/index.html"><span>Glimpse</span><wbr><span><span>Frame</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-glimpse-frame/index.html"><span>Glimpse</span><wbr><span><span>Frame</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="674214842%2FClasslikes%2F901518242"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-glimpse-frame/index.html">GlimpseFrame</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>DEFAULT_TITLE<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>DEFAULT_WIDTH<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>DEFAULT_HEIGHT<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;fpsLimit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a>, <a href="../../../glimpse/ui/graphics.glimpse.ui/-glimpse-component/index.html">GlimpseComponent</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An implementation of <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a> that contains only <a href="-glimpse-panel/index.html">GlimpsePanel</a>.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-glimpse-frame/index.html">GlimpseFrame</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>DEFAULT_TITLE<span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>DEFAULT_WIDTH<span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>DEFAULT_HEIGHT<span class="token punctuation">, </span></span><span class="parameter ">fpsLimit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a>, <a href="../../../glimpse/ui/graphics.glimpse.ui/-glimpse-component/index.html">GlimpseComponent</a></div><div class="brief "><p class="paragraph">An implementation of <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a> that contains only <a href="-glimpse-panel/index.html">GlimpsePanel</a>.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-307864829%2FClasslikes%2F901518242" anchor-label="GlimpsePanel" id="-307864829%2FClasslikes%2F901518242" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-glimpse-panel/index.html"><span>Glimpse</span><wbr><span><span>Panel</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-glimpse-panel/index.html"><span>Glimpse</span><wbr><span><span>Panel</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-307864829%2FClasslikes%2F901518242"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/desktopMain">desktop</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-glimpse-panel/index.html">GlimpsePanel</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fixedScale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.jogamp.opengl.awt/GLJPanel///PointingToDeclaration/">GLJPanel</span>, <a href="../../../glimpse/ui/graphics.glimpse.ui/-glimpse-component/index.html">GlimpseComponent</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An implementation of <span data-unresolved-link="com.jogamp.opengl.awt/GLJPanel///PointingToDeclaration/">GLJPanel</span> that uses <a href="../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">Glimpse OpenGL adapter</a> and <a href="../../../glimpse/core/graphics.glimpse/-glimpse-callback/index.html">callback interface</a> for rendering.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/desktopMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/desktopMain">desktop</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/desktopMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-glimpse-panel/index.html">GlimpsePanel</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fixedScale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.jogamp.opengl.awt/GLJPanel///PointingToDeclaration/">GLJPanel</span>, <a href="../../../glimpse/ui/graphics.glimpse.ui/-glimpse-component/index.html">GlimpseComponent</a></div><div class="brief "><p class="paragraph">An implementation of <span data-unresolved-link="com.jogamp.opengl.awt/GLJPanel///PointingToDeclaration/">GLJPanel</span> that uses <a href="../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">Glimpse OpenGL adapter</a> and <a href="../../../glimpse/core/graphics.glimpse/-glimpse-callback/index.html">callback interface</a> for rendering.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1508255915%2FClasslikes%2F1128431036" anchor-label="GlimpseSurfaceView" id="-1508255915%2FClasslikes%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
-        <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-glimpse-surface-view/index.html"><span>Glimpse</span><wbr><span>Surface</span><wbr><span><span>View</span></span></a></div>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-glimpse-surface-view/index.html"><span>Glimpse</span><wbr><span>Surface</span><wbr><span><span>View</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1508255915%2FClasslikes%2F1128431036"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-glimpse-surface-view/index.html">GlimpseSurfaceView</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.html">GLSurfaceView</a>, <a href="../../../glimpse/ui/graphics.glimpse.ui/-glimpse-component/index.html">GlimpseComponent</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An implementation of <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.html">GLSurfaceView</a> that uses <a href="../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">Glimpse OpenGL adapter</a> and <a href="../../../glimpse/core/graphics.glimpse/-glimpse-callback/index.html">callback interface</a> for rendering.</p></div></div>                </div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-glimpse-surface-view/index.html">GlimpseSurfaceView</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">attrs<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/util/AttributeSet.html">AttributeSet</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.html">GLSurfaceView</a>, <a href="../../../glimpse/ui/graphics.glimpse.ui/-glimpse-component/index.html">GlimpseComponent</a></div><div class="brief "><p class="paragraph">An implementation of <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.html">GLSurfaceView</a> that uses <a href="../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">Glimpse OpenGL adapter</a> and <a href="../../../glimpse/core/graphics.glimpse/-glimpse-callback/index.html">callback interface</a> for rendering.</p></div></div>                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -131,6 +140,6 @@ if(savedDarkMode === true){
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 
