@@ -19,6 +19,8 @@ graphics.glimpse.shaders
 graphics.glimpse.shaders.annotations
 graphics.glimpse.textures
 graphics.glimpse.types
+module:glimpse-geom
+graphics.glimpse.geom
 module:glimpse-hud
 graphics.glimpse.hud
 graphics.glimpse.hud.dsl
@@ -34,6 +36,8 @@ graphics.glimpse.offscreen.gl
 module:glimpse-processor-ksp
 graphics.glimpse.ksp
 graphics.glimpse.ksp.poet
+module:glimpse-testing
+graphics.glimpse.testing
 module:glimpse-ui
 graphics.glimpse.ui
 module:glimpse-ui-compose
