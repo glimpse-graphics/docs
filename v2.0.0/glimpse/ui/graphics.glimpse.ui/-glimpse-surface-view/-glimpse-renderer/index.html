@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GlimpseRenderer</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../../../index.html">
+<span>glimpse-graphics</span>            </a>    </div>
+    <div>2.0.0-DEV
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="glimpse-ui::graphics.glimpse.ui/GlimpseSurfaceView.GlimpseRenderer///PointingToDeclaration//1128431036">
+  <div class="breadcrumbs"><a href="../../../index.html">glimpse-ui</a><span class="delimiter">/</span><a href="../../index.html">graphics.glimpse.ui</a><span class="delimiter">/</span><a href="../index.html">GlimpseSurfaceView</a><span class="delimiter">/</span><span class="current">GlimpseRenderer</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Glimpse</span><wbr><span><span>Renderer</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="index.html">GlimpseRenderer</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><a href="../../../../../glimpse/core/graphics.glimpse/-glimpse-callback/index.html">GlimpseCallback</a></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.Renderer.html">GLSurfaceView.Renderer</a>, <a href="../../../../../glimpse/core/graphics.glimpse/-glimpse-callback/index.html">GlimpseCallback</a></div><p class="paragraph">An implementation of renderer using a given <a href="../../../../../glimpse/ui/graphics.glimpse.ui/-glimpse-surface-view/-glimpse-renderer/callback.html">callback</a> for rendering.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1755549344%2FConstructors%2F1128431036" anchor-label="GlimpseRenderer" id="1755549344%2FConstructors%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-glimpse-renderer.html"><span>Glimpse</span><wbr><span><span>Renderer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1755549344%2FConstructors%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><a href="../../../../../glimpse/core/graphics.glimpse/-glimpse-callback/index.html">GlimpseCallback</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1108924068%2FFunctions%2F1128431036" anchor-label="onCreate" id="-1108924068%2FFunctions%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1108924068%2FFunctions%2F1128431036"><span>on</span><wbr><span><span>Create</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1108924068%2FFunctions%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1108924068%2FFunctions%2F1128431036"><span class="token function">onCreate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../../../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">GlimpseAdapter</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1756850840%2FFunctions%2F1128431036" anchor-label="onDestroy" id="-1756850840%2FFunctions%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1756850840%2FFunctions%2F1128431036"><span>on</span><wbr><span><span>Destroy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1756850840%2FFunctions%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1756850840%2FFunctions%2F1128431036"><span class="token function">onDestroy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../../../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">GlimpseAdapter</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1697782030%2FFunctions%2F1128431036" anchor-label="onDrawFrame" id="1697782030%2FFunctions%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-draw-frame.html"><span>on</span><wbr><span>Draw</span><wbr><span><span>Frame</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1697782030%2FFunctions%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-draw-frame.html"><span class="token function">onDrawFrame</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/javax/microedition/khronos/opengles/GL10.html">GL10</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Calls <a href="index.html#75117558%2FFunctions%2F1128431036">GlimpseCallback.onRender</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="75117558%2FFunctions%2F1128431036" anchor-label="onRender" id="75117558%2FFunctions%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#75117558%2FFunctions%2F1128431036"><span>on</span><wbr><span><span>Render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="75117558%2FFunctions%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#75117558%2FFunctions%2F1128431036"><span class="token function">onRender</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../../../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">GlimpseAdapter</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1990725332%2FFunctions%2F1128431036" anchor-label="onResize" id="1990725332%2FFunctions%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1990725332%2FFunctions%2F1128431036"><span>on</span><wbr><span><span>Resize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1990725332%2FFunctions%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1990725332%2FFunctions%2F1128431036"><span class="token function">onResize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="../../../../../glimpse/core/graphics.glimpse/-glimpse-adapter/index.html">GlimpseAdapter</a><span class="token punctuation">, </span></span><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-257941260%2FFunctions%2F1128431036" anchor-label="onSurfaceChanged" id="-257941260%2FFunctions%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-surface-changed.html"><span>on</span><wbr><span>Surface</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-257941260%2FFunctions%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-surface-changed.html"><span class="token function">onSurfaceChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/javax/microedition/khronos/opengles/GL10.html">GL10</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Calls <a href="index.html#1990725332%2FFunctions%2F1128431036">GlimpseCallback.onResize</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2036841694%2FFunctions%2F1128431036" anchor-label="onSurfaceCreated" id="-2036841694%2FFunctions%2F1128431036" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-surface-created.html"><span>on</span><wbr><span>Surface</span><wbr><span><span>Created</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2036841694%2FFunctions%2F1128431036"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":glimpse:ui:dokkaHtmlPartial/androidMain" data-filterable-set=":glimpse:ui:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":glimpse:ui:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":glimpse:ui:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-surface-created.html"><span class="token function">onSurfaceCreated</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gl<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/javax/microedition/khronos/opengles/GL10.html">GL10</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">config<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/javax/microedition/khronos/egl/EGLConfig.html">EGLConfig</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Calls <a href="index.html#-1108924068%2FFunctions%2F1128431036">GlimpseCallback.onCreate</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
