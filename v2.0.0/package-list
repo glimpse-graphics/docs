@@ -21,6 +21,7 @@ graphics.glimpse.textures
 graphics.glimpse.types
 module:glimpse-geom
 graphics.glimpse.geom
+graphics.glimpse.geom.freeform
 graphics.glimpse.geom.interpolation
 module:glimpse-hud
 graphics.glimpse.hud
